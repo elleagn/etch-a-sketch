@@ -12,4 +12,16 @@ const createGrid = function () {
   }
 };
 
-createGrid();
+const colorOnHover = function () {
+  const boxes = document.querySelectorAll(".box");
+  boxes.forEach((box) => {
+    box.addEventListener("mouseover", () => {
+      box.style.backgroundColor = "black";
+    });
+  });
+};
+
+const setupThePage = function {
+    createGrid();
+    colorOnHover();
+}
