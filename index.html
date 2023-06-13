@@ -8,6 +8,23 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="menu">
+      <p class="title">Etch a Sketch</p>
+      <label for="grid-size"
+        ><p class="label">Select the number of rows:</p>
+        <div id="slider">
+          <input id="grid-size" type="range" />
+          <output id="rangevalue">16</output>
+        </div>
+        <div class="colorpicker">
+          <label for="color">
+            <p>Choose the color:</p>
+            <input type="color" value="#ffb721" id="color" />
+          </label>
+        </div>
+      </label>
+    </div>
+
     <div class="container"></div>
   </body>
 </html>

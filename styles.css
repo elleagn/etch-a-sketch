@@ -1,10 +1,146 @@
+@font-face {
+  font-family: "jolly";
+  src: url("fonts/otf/jolly-traveler-jolly-traveler-svg-400.otf");
+}
+
+@font-face {
+  font-family: "subway";
+  src: url("fonts/SUBWT___.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 100px;
   margin: 0;
+  background-image: url("https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+  background-size: contain;
+}
+
+.menu {
+  padding: 20px;
+  height: 90vh;
+  font-family: "jolly";
+  font-size: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+  border-style: solid;
+}
+
+.title {
+  margin: 0;
+}
+
+label {
+  color: whitesmoke;
+  font-family: subway;
+  font-size: 36px;
+}
+
+label[for="color"] {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/*------ Style 2 ------*/
+#color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 75px;
+  height: 75px;
+  border: none;
+  cursor: pointer;
+}
+#color::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 5px solid #000000;
+}
+#color::-moz-color-swatch {
+  border-radius: 50%;
+  border: 5px solid #000000;
+}
+
+#slider {
+  display: flex;
+  margin: 20px 125px;
+  width: 70%;
+  justify-content: space-between;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: whitesmoke;
+  border-radius: 50px;
+  height: 0.5rem;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: whitesmoke;
+  border-radius: 50px;
+  height: 0.5rem;
+  width: 500px;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: whitesmoke;
+  height: 2rem;
+  width: 1rem;
+}
+
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 50px; /*Removes default border-radius that FF applies*/
+  background-color: whitesmoke;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid gainsboro;
+  outline: 3px solid gainsboro;
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid gainsboro;
+  outline: 3px solid gainsboro;
+  outline-offset: 0.125rem;
 }
 
 .container {
@@ -14,6 +150,9 @@ body {
   flex-direction: column;
   padding: 0;
   margin: 0;
+  border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+  border-style: solid;
+  flex-shrink: 0;
 }
 
 .row {
@@ -26,7 +165,7 @@ body {
 
 .box {
   margin: 0;
-  border: 1px black solid;
+  border: 1px solid black;
   flex: auto;
   padding: 1px;
 }
