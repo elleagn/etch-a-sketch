@@ -13,7 +13,6 @@
 }
 
 body {
-  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,11 +21,12 @@ body {
   margin: 0;
   background-image: url("https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
   background-size: contain;
+  overflow: scroll;
 }
 
 .menu {
   padding: 20px;
-  height: 90vh;
+  height: 960px;
   font-family: "jolly";
   font-size: 100px;
   display: flex;
@@ -75,9 +75,7 @@ label[for="color"] {
 
 #slider {
   display: flex;
-  margin-right: 250px;
-  width: 70%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 input[type="range"] {
@@ -145,16 +143,15 @@ input[type="range"]:focus::-moz-range-thumb {
 }
 
 .container {
-  width: 90vh;
-  height: 90vh;
-  min-width: 700px;
+  width: 960px;
+  height: 960px;
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
   border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
   border-style: solid;
-  flex-shrink: 0;
+  flex: none;
 }
 
 .row {
