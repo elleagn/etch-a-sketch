@@ -11,8 +11,10 @@
 * {
   box-sizing: border-box;
 }
-
+min-height: 960px;
 body {
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +28,8 @@ body {
 .menu {
   padding: 20px;
   height: 960px;
+  min-height: 960px;
+  flex: none;
   font-family: "jolly";
   font-size: 100px;
   display: flex;
@@ -143,7 +147,9 @@ input[type="range"]:focus::-moz-range-thumb {
 
 .container {
   width: 960px;
+  min-width: 960px;
   height: 960px;
+  min-height: 960px;
   display: flex;
   flex-direction: column;
   padding: 0;
