@@ -31,9 +31,10 @@ body {
   font-size: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
   border-style: solid;
+  min-width: 700px;
 }
 
 .title {
@@ -74,7 +75,7 @@ label[for="color"] {
 
 #slider {
   display: flex;
-  margin: 20px 125px;
+  margin-right: 250px;
   width: 70%;
   justify-content: space-between;
 }
@@ -84,7 +85,7 @@ input[type="range"] {
   appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 15rem;
+  width: 500px;
 }
 
 /***** Track Styles *****/
@@ -146,6 +147,7 @@ input[type="range"]:focus::-moz-range-thumb {
 .container {
   width: 90vh;
   height: 90vh;
+  min-width: 700px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -168,4 +170,39 @@ input[type="range"]:focus::-moz-range-thumb {
   border: 1px solid black;
   flex: auto;
   padding: 1px;
+}
+
+.eraser {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.special-modes {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+input[type="checkbox"] {
+  background-color: transparent;
+  margin-right: 20px;
+  margin-bottom: -10px;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}
+
+button {
+  width: 40%;
+  height: 4em;
+  font-size: 25px;
+  font-family: subway;
+  color: whitesmoke;
+  background-color: black;
+  cursor: pointer;
 }
